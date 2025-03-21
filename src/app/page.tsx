@@ -52,12 +52,12 @@ export default function Home() {
 
 
     return (
-        <div className="w-full min-h-screen">
+        <div className="w-full min-h-screen ">
             <section className="h-72 bg-gradient-to-br from-stone-90 from-[#000a0f]  to-[#023047] shadow-2xl flex flex-col items-center bg-cover bg-no-repeat px-8 lg:px-20 border-b border-[#219EBC]">
                 <h1 className="text-xl font-black my-auto text-center">By Emerson A. Tieppo Jr.</h1>
             </section>
 
-            <section className="gap-8 p-8 lg:p-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-stone-950 pt-40">
+            <section className="gap-8 p-8 lg:p-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-stone-950 pt-40 h-full">
                 {pokemons && pokemons.map((pkm, index) =>
                     <PokemonCard key={index} {...pkm} />
                 )}

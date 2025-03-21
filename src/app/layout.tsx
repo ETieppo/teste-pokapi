@@ -25,7 +25,9 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased josefin`}>
-                {children}
+                <main className="bg-stone-950">
+                    {children}
+                </main>
             </body>
         </html>
     );
