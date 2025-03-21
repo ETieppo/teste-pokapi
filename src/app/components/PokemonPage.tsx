@@ -39,7 +39,7 @@ console.log(pokemon)
                     <h1 className="mx-auto my-auto text-4xl">Carregando...</h1>
                 </section>
             ) : (
-                <section className=" w-full flex flex-col justify-center p-20">
+                <section className=" w-full flex flex-col justify-center p-6 lg:p-20">
                     <div className="flex flex-col gap-4 mx-auto mb-8">
                         <img
                             className="h-96 w-96"
