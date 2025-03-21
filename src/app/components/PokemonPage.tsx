@@ -30,7 +30,7 @@ export default function PokemonPageClient() {
             setResponseMessage("Não existem mais páginas!")
         }
     }, [])
-
+console.log(pokemon)
     return (
         <div className="min-h-screen flex flex-col w-full bg-gradient-to-br from-[#000a0f] to-[#023047]">
             <Toast message={responseMessage} />
@@ -61,6 +61,8 @@ export default function PokemonPageClient() {
                                 <li>Height: <span>{pokemon.height}</span></li>
                                 <li>Weight: <span>{pokemon.weight}</span></li>
                                 <li>Base experience: <span>{pokemon.base_experience}</span></li>
+                                <div className="w-full my-4 border border-stone-700"/>
+                                {pokemon.types.map((tipo, index)=><li key={index} className="text-yellow-300">{tipo.type.name}</li>)}
                             </ul>
                         </div>
                         <div className="bg-stone-800 p-6 rounded-2xl border border-neutral-700 w-full flex flex-col">
