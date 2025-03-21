@@ -4,6 +4,7 @@ import { PokemonProps } from "@/interfaces/PokemonProps"
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import Toast from "../components/Toast"
+import Link from "next/link"
 
 export default function PokemonPageClient() {
     const pokemon_id = useSearchParams().get('id')
@@ -31,14 +32,14 @@ export default function PokemonPageClient() {
     }, [])
 
     return (
-        <div className="min-h-screen w-full bg-gradient-to-br from-[#000a0f] to-[#023047]">
+        <div className="min-h-screen flex flex-col w-full bg-gradient-to-br from-[#000a0f] to-[#023047]">
             <Toast message={responseMessage} />
             {!pokemon ? (
                 <section className="flex w-full min-h-screen items-center justify-center">
                     <h1 className="mx-auto my-auto text-4xl">Carregando...</h1>
                 </section>
             ) : (
-                <section className="min-h-screen w-full flex flex-col justify-center p-20">
+                <section className=" w-full flex flex-col justify-center p-20">
                     <div className="flex flex-col gap-4 mx-auto mb-8">
                         <img
                             className="h-96 w-96"
@@ -85,6 +86,7 @@ export default function PokemonPageClient() {
                     </div>
                 </section>
             )}
+            <Link href="/" className="text-stone-600 fixed m-6 ml-6 top-0 mx-auto hover:text-white transition-all duration-200 mb-8">voltar</Link>
         </div>
     )
 }

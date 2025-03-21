@@ -20,7 +20,7 @@ export default function PokemonCard({ name, url }: IndexProps) {
 
 
     if (pokemonData) return (
-        <Link href={`/pokemon?id=${pokemonData.id}`} className="bg-neutral-800 rounded-xl p-6 border border-neutral-700 items-center flex flex-col h-fit">
+        <Link href={`/pokemon?id=${pokemonData.id}`} className="bg-neutral-800 rounded-xl p-6 border border-neutral-700 items-center flex flex-col h-fit hover:bg-blue-800 transition-all duration-300">
             {!pokemonData && (<p>Carregando dados...</p>)}
             {
                 pokemonData &&
